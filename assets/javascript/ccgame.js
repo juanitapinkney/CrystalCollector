@@ -1,237 +1,75 @@
-$(document).ready(function() {
+var wins = 0;
+var losses = 0;
+//players currunt score
+var addition = 0;
+//selects a random number from 19 t0 120
+var total = Math.floor((Math.random()* 100) + 19);
+//assigns random value to crystals from 1-12
+var rainbow = Math.floor((Math.random()* 12) + 1);
+var amethyst = Math.floor((Math.random()* 12) + 1);
+var peridot = Math.floor((Math.random()* 12) + 1);
+var green = Math.floor((Math.random()* 12) + 1);
+var audio = new Audio('https://files.slack.com/files-pri/T0J8XK2Q3-F0NHG3FDZ/download/raven.mp3');
 
-	crystals = ['assets/images/red.png','assets/images/blue.png','assets/images/yellow.png','assets/images/green.png'];
+//updates addition in html
+var updateAddition = function (){
+	$('.addition').empty();
+	$('.addition').append(addition);
+	$('#wins').empty();
+	$('#wins').append(wins);
+	$('#losses').empty();
+	$('#losses').append(losses);
+}
+//restart function
+var restart = function(){
+	addition = 0;
+    total = Math.floor((Math.random()* 100) + 19);
 
-	var counter = 0;
-	var wins = 0;
-	var losses = 0;
-	$('#win').text(wins);
-	$('#loss').text(losses);
-	
-	newCrystals();
-	newGame();
+	$('.total').empty();
+	$('.total').append(total);
 
-	function newCrystals () {
-		var numbers = []
-			while(numbers.length < 4){
-			  var randomnumber = Math.ceil(Math.random()*12)
-			  var found = false;
-			  for (var i=0; i< numbers.length; i++){
-				if (numbers[i] == randomnumber){
-					found = true; break
-				}
-			  }
-			  if(!found)numbers[numbers.length]=randomnumber;
-			}
-		console.log(numbers);		
-
-		for (i = 0; i < numbers.length; i++) {
-			var imageCrystal = $('<img>');
-			imageCrystal.attr('data-num', numbers[i]);
-			imageCrystal.attr('src', crystals[i]);
-			imageCrystal.attr('alt', 'crystals');
-			imageCrystal.addClass('crystalImage')
-			$('#crystals').append(imageCrystal);
-		}
+	rainbow = Math.floor((Math.random()* 12) + 1);
+    amethyst = Math.floor((Math.random()* 12) + 1);
+    peridot = Math.floor((Math.random()* 12) + 1);
+    diamond = Math.floor((Math.random()* 12) + 1);
+    //alert('restart');
+    updateAddition();
+}
+var logic = function (){
+	if (addition == total) {
+		wins = wins + 1;
+		
+		audio.play();
+		restart();
+	}else if(addition > total){
+		losses = losses + 1;
+		
+		audio.play();
+		restart();
+	}else{
+		updateAddition();
 	}
+}
+$('.total').append(total);
 
-	function newGame() {
+$('.addition').append(addition);
+//function
 
-		counter = 0;
-		$('#yourScore').text(counter);
-
-		function randomIntFromInterval(min,max){
-		   	return Math.floor(Math.random()*(max-min+1)+min);
-			}
-
-		var numberToGuess = randomIntFromInterval(19,120);
-
-		$('.value').text(numberToGuess);
-
-
-		$('.crystalImage').on('click', function(){
-		    counter = counter + parseInt($(this).data('num'));
-		   
-		    $('#yourScore').text(counter);
-
-		    if (counter == numberToGuess){
-		      $('#status').text('You won!!!!');
-		      wins ++;
-		      $('#win').text(wins);
-		      console.log(wins)
-		      $('#crystals').empty();
-		      newCrystals();
-		      newGame();
-		        
-		    } else if ( counter > numberToGuess){
-		        $('#status').text('You lost!')
-		        losses ++;
-		        $('#loss').text(losses);
-		        console.log(losses)
-		        $('#crystals').empty();
-		        newCrystals();
-		        newGame();
-		    }
-		});
-	}
-
+$(document).ready(function(){
+	$('#rainbow').click(function(){
+		addition = addition + rainbow;
+		logic();
+	})
+	$('#amethyst').click(function(){
+		addition = addition + amethyst;
+		logic();
+	})
+	$('#peridot').click(function(){
+		addition = addition + crystals2;
+		logic();
+	})
+	$('#diamond').click(function(){
+		addition = addition + diamond;
+		logic();
+	})
 });
-
-
-
-
-
-
-
-
-
-
-// $(document).ready(function() {
-// var number = "";
-// var numberArray = [];
-// var numberDisplay = [];
-// var failedGuesses = 0;
-
-// newGame();
-// });
-
-// function arrayNumber() {
-               
-//   var number = ["0" + "1000"; i++,];
-  
-//   var newNumber = [i];
-                         
-// for (var i = 0; i < number.length; i++) {
-// 	$(".number-guessed").append("___");
-  
- 
-    
-//     newNumber.push(number[i]);
-    
-//   }
-
-//   return newNumber;
-// }
-
-// arrayNumber();
-
-// function chooseNumber() {
-// var randomNum = Math.floor((Math.random() * 9));
-
-// function newGame() {
-// $(".game-input").hide();
-// $(".start-section").show();
-// $(".start-button").click(function() {
-// numberArray = [];
-// numberDisplay = [];
-// $(".status").empty();
-// $(".number-guessed").empty();
-// failedGuesses = 0;
-// startGame();
-// });
-// }
-
-// function startGame() {
-// $(".game-input").show();
-// }
-
-
-// function checkGuess(guess) {
-// var successfulGuess = false;
-// for (i = 0; i < numberArray.length; i++) {
-// if (numberArray[i] === guess) {
-// numberDisplay[i] = guess;
-// successfulGuess = true;
-
-// console.log ()
-// }
-// }
-
-
-// if (guess != successfulGuess) {
-// failedGuesses++;
-// if (failedGuesses > word ) {
-// $(".status").html("Nine incorrect guesses, you LOST! <br> The word was ").append(number);
-// newGame();
-// }
-// } 
-
-// else {
-// if ($.inArray("*", numberDisplay) < 0) {
-// $(".status").html("You Win!!");
-// newGame();
-// }
-// }
-// $(".number-guessed").empty();
-// $(".number-guessed").html(numberDisplay)
-// }
-
-
-// function getLetter() {
-// var guess = $(".number").val().toUpperCase();
-// $(".guess").val("");
-// $(".letters-guessed").append(guess + " ");
-// checkGuess(guess);
-// };
-
-
-
-
-//   var targetNumber = 53;
-
-//   $("#number-to-guess").text(targetNumber);
-
-//   var counter = 0;
-
-//   // Now for the hard part. Creating multiple crystals each with their own unique number value.
-
-//   // We begin by expanding our array to include four options.
-//   var numberOptions = [10, 5, 3, 7];
-
-//   // Next we create a for loop to create crystals for every numberOption.
-//   for (var i = 0; i < numberOptions.length; i++) {
-
-//     // For each iteration, we will create an imageCrystal
-//     var imageCrystal = $("<img>");
-
-//     // First each crystal will be given the class ".crystal-image".
-//     // This will allow the CSS to take effect.
-//     imageCrystal.addClass("crystal-image");
-
-//     // Each imageCrystal will be given a src link to the crystal image
-//     imageCrystal.attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg");
-
-//     // Each imageCrystal will be given a data attribute called data-crystalValue.
-//     // This data attribute will be set equal to the array value.
-//     imageCrystal.attr("data-crystalvalue", numberOptions[i]);
-
-//     // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
-//     $("#crystals").append(imageCrystal);
-//   }
-
-//   // This time, our click event applies to every single crystal on the page. Not just one.
-//   $(".crystal-image").on("click", function() {
-
-//     // Determining the crystal's value requires us to extract the value from the data attribute.
-//     // Using the $(this) keynumber specifies that we should be extracting the crystal value of the clicked crystal.
-//     // Using the .attr("data-crystalvalue") allows us to grab the value out of the "data-crystalvalue" attribute.
-//     // Since attributes on HTML elements are strings, we must convert it to an integer before adding to the counter
-    
-//     var crystalValue = ($(this).attr("data-crystalvalue"));
-//     crystalValue = parseInt(crystalValue);
-//     // We then add the crystalValue to the user's "counter" which is a global variable.
-//     // Every click, from every crystal adds to the global counter.
-//     counter += crystalValue;
-
-//     // All of the same game win-lose logic applies. So the rest remains unchanged.
-//     alert("New score: " + counter);
-
-//     if (counter === targetNumber) {
-//       alert("You win!");
-//     }
-
-//     else if (counter >= targetNumber) {
-//       alert("You lose!!");
-//     }
-
-//   });
