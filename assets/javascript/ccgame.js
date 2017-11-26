@@ -1,6 +1,37 @@
+// Global variables
+var mysteryNumber;
+var rainbow;
+var amethyst;
+var peridot;
+var diamond;
+
+// Initiate game
+gameInit();
+
+function storevariablecrystal()
+
+{
+
+var crystals = [ "rainbow", "amethyst", "peridot", "diamond"];
+
+arrayCopier (crystals);
+
+}
+
+function arrayCopier() {
+
+	for (var i = 0; i < crystals.length; i++) {
+
+		newNumber.push(arrayCopier[i]);
+	}
+	console.log(arrayCopier)
+	console.log(newNumber)
+}
+
+storeVariableCrystals ();
 
 // Crystal variables and values
-var crystal = {
+var crystals = {
 	rainbow: {
 		name: "rainbow",
 		value: 0
@@ -23,7 +54,7 @@ var crystal = {
 };
 
 
-//Players current and target scores
+// Players current and target scores
 var wins = 0;
 var losses = 0;
 
@@ -31,29 +62,31 @@ var losses = 0;
 var winCount = 0;
 var lossCount = 0;
 
-// calls button by id
+// Calls button by id
 var button = document.getElementById("rainbow");
 var button = document.getElementById("amethyst");
 var button = document.getElementById("peridot");
 var button = document.getElementById("diamond");
 
 
-//Assigns random value to crystals from 1-12
+// Assigns random value to crystals from 1-12
 var rainbow = Math.floor((Math.random()* 12) + 1);
 var amethyst = Math.floor((Math.random()* 12) + 1);
 var peridot = Math.floor((Math.random()* 12) + 1);
 var diamond = Math.floor((Math.random()* 12) + 1);
 
-//Selects a random number from 19 to 120
+// Selects a random number from 19 to 120
 var total = Math.floor((Math.random()* 100) + 19);
 
 function myButton() {
 
+}
 
-// udates background image in css
+
+// Udates background image in css
 var input = $( "input:image" ).css({ background-image: "wallpaper2.jpg" }
 
-//updates addition in html
+// Updates addition in html
 var updateAddition = function (){
 $('.addition').empty();
 $('.addition').append(addition);
@@ -63,7 +96,7 @@ $('#losses').empty();
 $('#losses').append(losses);
 }
 
-//restart function
+// Restart function
 var restart = function(){
 addition = 0;
 total = Math.floor((Math.random()* 100) + 19);
@@ -95,7 +128,8 @@ updateAddition();
 $('.total').append(total);
 
 $('.addition').append(addition);
-//function
+
+// Function
 
 $(document).ready(function(){
 
