@@ -4,7 +4,7 @@
 		  <meta charset="utf-8">
 			<title>Crystal Collector</title>
 
-			
+
 				<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 				<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 				<link rel="stylesheet" type="images/jpg" href=".crystal-collector-game/assets/images">
@@ -16,13 +16,6 @@
 				<h1><strong>Crystals Collector!</strong></h1>
 				
 
-				<!-- jQuery code for background image NOT WORKING! -->
-				<!-- <script>
-					var input = $( "input:image" ).css({ 
-						background-image: "crystal-collector-game/assets/images"
-				</script> -->
-			
-
 				<div>
 					<p>At the start of each game, you're given a random number</p>
 					<p>Click on one of the four power diamonds to match the random number</p>
@@ -32,27 +25,23 @@
 
 				<div>
 					<container .addClass( crystal );
-					<div id="random">Random:><div id="random"></div>
-					<div id="number">Number:><div id="number"></div>
-					<div id="losses">Losses:><div id="losses"></div>
-					<div id="outcome">Wins:><div id="wins"></div>
-					<div id="score">Score:><div id="score"></div>
+					class= "random" Random:
+					class= "number" Number:
+					class= "losses" Losses:
+					class= "outcome" Wins:
+					class= "score" Score:>
 				</div>
 
 				<div>
-					<button id="target" img href="./assets/images/rainbow.jpg" type="button" onclick="alert('Diamond!")>Diamond</button>
-					<button id="target" img href="./assets/images/amethyst.jpg" type="button" onclick="alert('Rainbow!">Rainbow</button>
-					<button id="target" img href="./assets/images/diamond.jpg.jpg" type="button" onclick="alert('Peridot!")>Peridot</button>
-					<button id="target" img href="./assets/images/peridot.jpg" type="button" onclick="alert('Amethyst!")>Amethyst</button>
+					<button class='crystal' id='rainbow' img href="./assets/images/rainbow.jpg" type="button" onclick="alert("rainbow")>Rainbow</button>
+					<button class='crystal' id="amethyst" img href="./assets/images/amethyst.jpg" type="button" onclick="alert("amethyst">Amethyst</button>
+					<button class='crystal' id="peridot" img href="./assets/images/peridot.jpg.jpg" type="button" onclick="alert("peridot")>Peridot</button>
+					<button class='crystal' id="diamond" img href="./assets/images/diamond.jpg" type="button" onclick="alert("diamond")>Diamond</button>
 				</div>			
 
 
 		
-			
-
-				<div id="math">
-				</div>
-
+		
 
 	</body>
 			<script type="text/javascript" href=("./crystal-collector-game/assets/javascript/*ccgame.js")></script>
