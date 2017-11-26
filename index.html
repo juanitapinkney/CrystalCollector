@@ -1,48 +1,61 @@
 
-			<!DOCTYPE> 
-			<html>
-				<title>Crystal Collector</title>
-			<head>
-				<meta charset="UTF-8">
+<!DOCTYPE> 
+	<html>
+	<meta charset="UTF-8">
+		<title>Crystal Collector</title>
+	<head>
 				<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 				<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-				<link rel="stylesheet" type="images/jpg" href="assets/images">
+				<link rel="stylesheet" src="assets/images" href="assets/images">
 
 				<script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
 
-			</head>
-			<body>
-				<header>
-					<h1 id ="name">Crystal Collector!!</h1>
-				</header>
-				<div class="instructions">
-					<p>At the start of each game you're given a random number</p>
-					<p> You must click on one of the four power diamondo match the random number</p>
-					<p>Each power crystal has a hidden number</p>
-					<p>GLHF!!</p>
-				</div>
-				<div class="random">
-					<div class="number"></div>
+	</head>
+	<body>
+				
+				<h1><strong>Crystals Collector!</strong></h1>
 
-				<div class="outcome">
-					Wins:<div id="wins"></div>
-					Losses:<div id="losses"></div>
+<!-- 				<p><img href=("wallpaper2.jpg") src="(/assets/images/wallpaper2.jpg")></p>
+ -->
+
+
+
+				<div class="instructions">
+				<p>At the start of each game you're given a random number</p>
+				<p> You must click on one of the four power diamondo match the random number</p>
+				<p>Each power crystal has a hidden number</p>
 				</div>
+
+
+				<div class="random">Random:><div id="random"></div>
+				<div class="number">Number:><div id="number"></div>
+				<div class="losses">Losses:><div id="losses"></div>
+				<div class="outcome">Wins:><div id="wins"></div>
+
+				<button type="button" onclick="alert('Diamond!')">Diamond!</button>
+				<button type="button" onclick="alert('Rainbow!')">Rainbow!</button>
+				<button type="button" onclick="alert('Peridot!')">Peridot!</button>
+				<button type="button" onclick="alert('Amethyst!')">Amethyst!</button>
+
 
 				<div class="power">
-					<img src="/crystal-collector-game/.assets/images/rainbow.jpg" class="click" id="rainbow">
-					<img src=".assets/images/amethyst.jpg" class="click" id="amethyst">
-					<img src=".assets/images/diamond.jpg.jpg" class="click" id="diamond">
-					<img src=".assets/images/peridot.jpg" class="click" id="peridot">
+				<div><img href="./crystal-collector-game/.assets/images/rainbow.jpg" class="click" id="rainbow">
+				<div><img href="./assets/images/amethyst.jpg" class="click" id="amethyst">
+				<div><img href="./assets/images/diamond.jpg.jpg" class="click" id="diamond">
+				<div><img href="./assets/images/peridot.jpg" class="click" id="peridot">
 				</div>
+			</div>
+		</div>
+	</div>			
+
 
 				<div class="score">
-					<h3>Crystal Power Level:</h3>
+				<h3>Crystal Power Level:</h3>
 				</div>
 
-				<div class="math"></div>
+<div class="math"></div>
 
 
-				<script type="text/javascript" src="assets/javascript/game.js"></script>
-			</body>
-			</html>
+	</body>
+		<script type="text/javascript" href=("./crystal-collector-game/assets/javascript/*ccgame.js")></script>
+	</html>
