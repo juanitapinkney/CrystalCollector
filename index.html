@@ -1,5 +1,5 @@
 <!Doctype html>
-	<html lang="en">
+<html lang="en">
 		<head>
 		  <meta charset="utf-8">
 			<title>Crystal Collector</title>
@@ -9,10 +9,10 @@
 				<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 				<link rel="stylesheet" type="images/jpg" href=".crystal-collector-game/assets/images">
 
-				<script type="text/javascript" href=("./crystal-collector-game/assets/javascript/*ccgame.js")></script>
+				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-	</head>
-	<body>
+		</head>
+		<body>
 				<h1><strong>Crystals Collector!</strong></h1>
 				
 
@@ -23,26 +23,35 @@
 					<p>Good Luck!</p>
 				</div>
 
-				<div>
-					<container .addClass( crystal );
-					class= "random" Random:
-					class= "number" Number:
-					class= "losses" Losses:
-					class= "outcome" Wins:
-					class= "score" Score:>
+				<div class="container">
+					<div class= "random">Random:</div>
+					<div class= "number" >Number:</div>
+					<div class= "losses" >Losses:</div>
+					<div class= "outcomes">Outcome:</div>
+					<div class= "score">Score:</div>
+				
+
 				</div>
 
 				<div>
-					<button class="crystal" id="rainbow" img href="./assets/images/rainbow.jpg" type="button" onclick="alert("rainbow")>Rainbow</button>
-					<button class="crystal" id="amethyst" img href="./assets/images/amethyst.jpg" type="button" onclick="alert("amethyst">Amethyst</button>
-					<button class="crystal" id="peridot" img href="./assets/images/peridot.jpg.jpg" type="button" onclick="alert("peridot")>Peridot</button>
-					<button class="crystal" id="diamond" img href="./assets/images/diamond.jpg" type="button" onclick="alert("diamond")>Diamond</button>
+					<button class="crystal" id="rainbow" type="button">   
+						<img class="gempic" src="./assets/img/rainbow.jpg" />
+					</button>
+					<button class="crystal" id="amethyst" type="button">
+						<img class="gempic" src="./assets/img/amethyst.jpg" />
+					</button>
+					<button class="crystal" id="peridot" type="button">
+						<img class="gempic" src="./assets/img/peridot.jpg" />
+					</button>
+					<button class="crystal" id="diamond" type="button">
+						<img class="gempic" src="./assets/img/diamond.jpg" />
+					</button>
 				</div>			
 
 
 		
-		
-			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="./assets/javascript/ccgame.js"></script>
 
-	</body>
-	</html>
+
+		</body>
+</html>

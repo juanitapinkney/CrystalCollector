@@ -1,40 +1,29 @@
-$( document ).ready(function() {
-    console.log( "ready!" );
-});
-
 // Click Function
 
 $(document).ready(function(){
 
-$('#rainbow').click(function(){
-addition = addition + rainbow;
-logic();
+	$('#rainbow').click(function(){
+		addition = addition + rainbow;
+		logic();
+	})
+
+	$('#amethyst').click(function(){
+		addition = addition + amethyst;
+		logic();
+	})
+
+	$('#peridot').click(function(){
+		addition = addition + crystals2;
+		logic();
+	})
+
+	$('#diamond').click(function(){
+		addition = addition + diamond;
+		logic();
+	})
+
 })
 
-$('#amethyst').click(function(){
-addition = addition + amethyst;
-logic();
-})
-
-$('#peridot').click(function(){
-addition = addition + crystals2;
-logic();
-})
-
-$('#diamond').click(function(){
-addition = addition + diamond;
-logic();
-})
-});
-
-
-// Initiate game
-
-gameInit();
-
-// Attempts to add  image to background cover
-
-$( "img" ).ready( "wallpaper2.jpg" )
 
 // Assigns random value to crystals from 1-12
 
@@ -57,12 +46,11 @@ var diamond = Math.floor((Math.random()* 12) + 1);
 // Game Function
 
 function getRandomNumber () {
-	return Math.floor(Math.random() * 12) + 1);
+	return Math.floor((Math.random() * 12) + 1);
 	console.log ("Function Called")
 }
-getRandomNumber ();{
 
-}
+getRandomNumber();
 
 
 // Players current and target scores
@@ -86,6 +74,8 @@ $("#wins").text(wins);
 $("#losses").text(losses);
 
 }
+
+
 
 
 // function storevariablecrystal()
