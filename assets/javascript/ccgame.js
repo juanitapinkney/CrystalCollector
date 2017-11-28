@@ -12,19 +12,19 @@
 	  var amethyst= Math.floor(Math.random()*11+1)
 	  var peridot= Math.floor(Math.random()*11+1)
 	  var diamond= Math.floor(Math.random()*11+1)
-	  // Setting up random numbers for each jewel
-	  // Random number has to be between 1 - 12
+	  // Setting up random numbers for each crystal
+	  // Random number between 1 - 12
 	  // 
 
 	  var userTotal= 0; 
 	  var wins= 0;
 	  var losses = 0;
-	  //  Decaring variables for tallies
+	  // Define variables for score count
 	  // 
 
 		$('#numberWins').text(wins);
 		$('#numberLosses').text(losses);
-		//resets the game
+		//Rest game 
 		// 
 
 		function reset(){
@@ -38,20 +38,20 @@
 		      userTotal= 0;
 		      $('#finalTotal').text(userTotal);
 		      } 
-		//adds the wins to the userTotal
+		//This function adds the wins to the userTotal
 		// 
 
-		function yay(){
-		alert("You won!");
+		function winner(){
+		alert("Oh Happy Day!");
 		  wins++; 
 		  $('#numberWins').text(wins);
 		  reset();
 		}
-		//addes the losses to the userTotal
+		//This function adds the losses to the userTotal
 		// 
 
 		function loser(){
-		alert ("You lose!");
+		alert ("Sorry:(");
 		  losses++;
 		  $('#numberLosses').text(losses);
 		  reset()
@@ -67,7 +67,7 @@
 		// 
 
 		        if (userTotal == Random){
-		          yay();
+		          winner();
 		        }
 		        else if ( userTotal > Random){
 		          loser();
@@ -78,7 +78,7 @@
 		    console.log("New userTotal= " + userTotal);
 		    $('#finalTotal').text(userTotal); 
 		        if (userTotal == Random){
-		          yay();
+		          winner();
 		        }
 		        else if ( userTotal > Random){
 		          loser();
@@ -92,7 +92,7 @@
 		// 
 
 		          if (userTotal == Random){
-		          yay();
+		          winner();
 		        }
 		        else if ( userTotal > Random){
 		          loser();
@@ -104,7 +104,7 @@
 		    $('#finalTotal').text(userTotal); 
 		      
 		          if (userTotal == Random){
-		          yay();
+		          winner();
 		        }
 		        else if ( userTotal > Random){
 		          loser();
