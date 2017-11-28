@@ -7,58 +7,69 @@
 
 				<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 				<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-				<link rel="stylesheet" type="images/jpg" href=".crystal-collector-game/assets/images">
-
-				<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+				<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
 
 		</head>
 		<body>
 				<h1><strong>Crystals Collector!</strong></h1>
 				
+				<div class="instructions">
+					<h3>Rules of the game</h3>
 
-				<div>
-					<p>At the start of each game, you're given a random number.</p>
-					<p>Click on one of the four power diamonds to match the random number.</p>
-					<p>Each power crystal has a hidden number. Good Luck!</p>
-				</div>
+					</br>
+					<ol>
+						<h4><li>There are four crystals below.</li>
 
-<!-- 
-					<ul>
-						<li id="rainbow">Rainbow</li>
-						<li id="amethyst">Amethyst</li>
-						<li id="peridot">Peridot</li>
-						<li id="diamond">Diamond</li>
-					</ul> -->
-
-
-				<div class="button"
-					<div class= "random">Random:</div>
-					<div class= "number" >Number:</div>
-					<div class= "losses" >Losses:</div>
-					<div class= "outcomes">Outcome:</div>
-					<div class= "score">Score:</div>
+							<li>By clicking on a crystal, you will add a specific amount of points to your total score.</li>
+							<li>You win the game by matching your total score to the random number.</li>
+							<li>You lose the game if your total score goes above the random number.</li>
+							<li>The value of each crystal is hidden from you until you click on it.</li>
+							<li>Each time when the game starts, the game will change the values of each crystal.</li>
+						</h4>
+					</ol>
 				</div>
 
 
-				<div>
-					<button class="button" id="rainbow" type="button">   
-						<img class="crystalpic" src="./assets/img/rainbow.jpg" />
-					</button>
-					<button class="button" id="amethyst" type="button">
-						<img class="crystalpic" src="./assets/img/amethyst.jpg" />
-					</button>
-					<button class="button" id="peridot" type="button">
-						<img class="crystalpic" src="./assets/img/peridot.jpg" />
-					</button>
-					<button class="button" id="diamond" type="button">
-						<img class="crystalpic" src="./assets/img/diamond.jpg" />
-					</button>
-				</div>			
+					<div id="randomnumber-and-scoreboard">
+						<div id="random-number-generator">
+							<span id="random-number"></span>
+						</div>
 
-
-		
-		<script type="text/javascript" src="./assets/javascript/ccgame.js"></script>
-
+<!-- 						<div id="score-board">
+							<span id="win-or-lose"></span>
+							<p>Wins: <span id="win-counter">0</span></p>
+							<p>Losses: <span id="loss-counter">0</span></p>
+						</div>
+					</div>
+ -->
+ 						<br>
+					<div class="numberToMatch">
+						<h2>Number To Get:
+							<span id= "randomNumber"></span>
+						</h2>
+						<br>
+					</div>
+					<div class="winsAndLosses">
+						<h2>Wins:
+							<span id= "numberWins"></span>
+							</br>
+							Losses: 
+							<span id= "numberLosses"></span>
+						</h2>
+					</div>
+					<div class="crystal">
+						<img src="assets/img/rainbow.jpg" class=crystalpic id="rainbow" alt="Rainbow Crystal">
+						<img src="assets/img/amethyst.jpg" class=crystalpic id="amethyst" alt="Amethyst Crystal">
+						<img src="assets/img/peridot.jpg" class=crystalpic id= "peridot" alt="Peridot Crystal">
+						<img src="assets/img/diamond.jpg" class=crystalpic id= "diamond" alt="Diamond Crystal">
+					</div>
+					<div class="userTotal">
+						<h2>Your total score is:
+							<span id="finalTotal"></span>
+						</h2>
+					</div>
+					
+					<script type="text/javascript" src="assets/javascript/ccgame.js"></script>
 
 		</body>
 </html>

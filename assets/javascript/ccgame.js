@@ -1,73 +1,113 @@
-// Click Function
+	$( document ).ready(function(){
+	  var Random=Math.floor(Math.random()*101+19)
+	  // Selects a random number to be shown at the start of the game
+	  // Number should be should be between 19 - 120
+	  //
 
-$(document).ready(function(){
+	  $('#randomNumber').text(Random);
+	  // Appending random number to the randomNumber id in the html doc
+	  //
 
-	$('.rainbow').click(function(){
-		Math.random = Math.random + rainbow;
-		logic();
-	})
+	  var rainbow= Math.floor(Math.random()*11+1)
+	  var amethyst= Math.floor(Math.random()*11+1)
+	  var peridot= Math.floor(Math.random()*11+1)
+	  var diamond= Math.floor(Math.random()*11+1)
+	  // Setting up random numbers for each jewel
+	  // Random number has to be between 1 - 12
+	  // 
 
-	$('.amethyst').click(function(){
-		Math.random = Math.random + amethyst;
-		logic();
-	})
+	  var userTotal= 0; 
+	  var wins= 0;
+	  var losses = 0;
+	  //  Decaring variables for tallies
+	  // 
 
-	$('.peridot').click(function(){
-		Math.random = Math.random + peridot;
-		logic();
-	})
+		$('#numberWins').text(wins);
+		$('#numberLosses').text(losses);
+		//resets the game
+		// 
 
-	$('.diamond').click(function(){
-		Math.random = Math.random + diamond;
-		logic();
-	})
+		function reset(){
+		      Random=Math.floor(Math.random()*101+19);
+		      console.log(Random)
+		      $('#randomNumber').text(Random);
+		      rainbow= Math.floor(Math.random()*11+1);
+		      amethyst= Math.floor(Math.random()*11+1);
+		      peridot= Math.floor(Math.random()*11+1);
+		      diamond= Math.floor(Math.random()*11+1);
+		      userTotal= 0;
+		      $('#finalTotal').text(userTotal);
+		      } 
+		//adds the wins to the userTotal
+		// 
 
-})
+		function yay(){
+		alert("You won!");
+		  wins++; 
+		  $('#numberWins').text(wins);
+		  reset();
+		}
+		//addes the losses to the userTotal
+		// 
 
+		function loser(){
+		alert ("You lose!");
+		  losses++;
+		  $('#numberLosses').text(losses);
+		  reset()
+		}
+		//sets up click for jewels
+		// 
 
-// Assigns button by id
+		  $('#rainbow').on ('click', function(){
+		    userTotal = userTotal + rainbow;
+		    console.log("New userTotal= " + userTotal);
+		    $('#finalTotal').text(userTotal); 
+		//sets win/lose conditions
+		// 
 
-var button = document.getElementByClass("rainbow");
-var button = document.getElementByClass("amethyst");
-var button = document.getElementByClass("peridot");
-var button = document.getElementByClass("diamond");
+		        if (userTotal == Random){
+		          yay();
+		        }
+		        else if ( userTotal > Random){
+		          loser();
+		        }   
+		  })  
+		  $('#amethyst').on ('click', function(){
+		    userTotal = userTotal + amethyst;
+		    console.log("New userTotal= " + userTotal);
+		    $('#finalTotal').text(userTotal); 
+		        if (userTotal == Random){
+		          yay();
+		        }
+		        else if ( userTotal > Random){
+		          loser();
+		        } 
+		  })  
+		  $('#peridot').on ('click', function(){
+		    userTotal = userTotal + peridot;
+		    console.log("New userTotal= " + userTotal);
+		    $('#finalTotal').text(userTotal);
+		//sets win/lose conditions
+		// 
 
-// Assigns random value to crystals from 1-12
-
-var rainbow = Math.floor((Math.random()* 12) + 1);
-var amethyst = Math.floor((Math.random()* 12) + 1);
-var peridot = Math.floor((Math.random()* 12) + 1);
-var diamond = Math.floor((Math.random()* 12) + 1);
-
-
-// Game Function
-
-function getRandomNumber () {
-	on.click = Math.floor((Math.random() * 12) + 1);
-	console.log ("Function Called")
-}
-
-getRandomNumber();
-
-
-// Players current and target scores
-
-var wins = 0;
-var losses = 0;
-
-// Wins and Losses
-
-var winCount = 0;
-var lossCount = 0;
-
-function endGame() {
-	if (win) {
-		wins++;
-	} else	{
-		looses++;
-}
-
-$("#wins").text(wins);
-$("#losses").text(losses);
-
-}
+		          if (userTotal == Random){
+		          yay();
+		        }
+		        else if ( userTotal > Random){
+		          loser();
+		        } 
+		  })  
+		  $('#diamond').on ('click', function(){
+		    userTotal = userTotal + diamond;
+		    console.log("New userTotal= " + userTotal);
+		    $('#finalTotal').text(userTotal); 
+		      
+		          if (userTotal == Random){
+		          yay();
+		        }
+		        else if ( userTotal > Random){
+		          loser();
+		        }
+		  });   
+		}); 
