@@ -1,67 +1,92 @@
 <!Doctype html>
 <html lang="en">
-		<head>
-		  <meta charset="utf-8">
-			<title>Crystal Collector</title>
+   <head>
+      <meta charset="utf-8">
+      <title>Crystal Collector</title>
+      <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+   </head>
+   <body>
+      <h1><strong>Crystals Collector!</strong></h1>
+      <div class="instructions">
+         <h3>Rules of the game</h3>
+         </br>
+         <ol>
+            <h4>
+               <li>Choose any of the crystals below.</li>
+               <li>Each crystal will give a random number.</li>
+               <li>If you match your total score to the random number, you win!!</li>
+               <li>If your total score goes above the random number, you lose. :(</li>
+               <li>Simply click on each crystal to reveal the hidden number.</li>
+               <li>New random numbers are revealed with each new game. Good luck! *(^_^)*</li>
+            </h4>
+         </ol>
+      </div>
+      <div id="randomnumber-and-scoreboard">
+      <div id="random-number-generator">
+         <span id="random-number"></span>
+      </div>
+      <br>
+      <div class="numberToMatch">
+         <h2>Number To Get:
+            <span id= "randomNumber"></span>
+         </h2>
+         <br>
+      </div>
+      <div class="winsAndLosses">
+         <h2>Wins:
+            <span id= "numberWins"></span>
+            </br>
+            Losses: 
+            <span id= "numberLosses"></span>
+         </h2>
+      </div>
+      <div class="crystal">
+         <img src="assets/img/rainbow.jpg" class=crystalpic id="rainbow" alt="Rainbow Crystal">
+         <img src="assets/img/amethyst.jpg" class=crystalpic id="amethyst" alt="Amethyst Crystal">
+         <img src="assets/img/peridot.jpg" class=crystalpic id= "peridot" alt="Peridot Crystal">
+         <img src="assets/img/diamond.jpg" class=crystalpic id= "diamond" alt="Diamond Crystal">
+      </div>
+      <div class="userTotal">
+         <h2>Your total score is:
+            <span id="finalTotal"></span>
+         </h2>
+      </div>
 
 
-				<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-				<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-				<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
-
-		</head>
-		<body>
-				<h1><strong>Crystals Collector!</strong></h1>
-				
-				<div class="instructions">
-					<h3>Rules of the game</h3>
-
-					</br>
-					<ol>
-						<h4><li>Choose any of the crystals below.</li>
-							<li>Each crystal will give a random number.</li>
-							<li>If you match your total score to the random number, you win!!</li>
-							<li>If your total score goes above the random number, you lose. :(</li>
-							<li>Simply click on each crystal to reveal the hidden number.</li>
-							<li>New random numbers are revealed with each new game. Good luck! *(^_^)*</li>
-						</h4>
-					</ol>
-				</div>
 
 
-					<div id="randomnumber-and-scoreboard">
-						<div id="random-number-generator">
-							<span id="random-number"></span>
-						</div>
+          <footer class="page-footer blue-grey darken-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text"></h5>
+                    <p class="grey-text text-lighten-4"></p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text"></h5>
+                    <ul>
 
- 						<br>
-					<div class="numberToMatch">
-						<h2>Number To Get:
-							<span id= "randomNumber"></span>
-						</h2>
-						<br>
-					</div>
-					<div class="winsAndLosses">
-						<h2>Wins:
-							<span id= "numberWins"></span>
-							</br>
-							Losses: 
-							<span id= "numberLosses"></span>
-						</h2>
-					</div>
-					<div class="crystal">
-						<img src="assets/img/rainbow.jpg" class=crystalpic id="rainbow" alt="Rainbow Crystal">
-						<img src="assets/img/amethyst.jpg" class=crystalpic id="amethyst" alt="Amethyst Crystal">
-						<img src="assets/img/peridot.jpg" class=crystalpic id= "peridot" alt="Peridot Crystal">
-						<img src="assets/img/diamond.jpg" class=crystalpic id= "diamond" alt="Diamond Crystal">
-					</div>
-					<div class="userTotal">
-						<h2>Your total score is:
-							<span id="finalTotal"></span>
-						</h2>
-					</div>
-					
-					<script type="text/javascript" src="assets/javascript/ccgame.js"></script>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                &copy;
+                <script language="javascript" type="text/javascript">
+                    var today = new Date();
+                    var year = today.getFullYear();
+                    document.write(year);
+                </script>
+                Juanita Pinkney. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
 
-		</body>
+
+
+      <script type="text/javascript" src="assets/javascript/ccgame.js"></script>
+   </body>
 </html>
