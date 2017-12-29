@@ -9,7 +9,7 @@ $(document).ready(function() {
   var rainbow = Math.floor(Math.random() * 11 + 1)
   var amethyst = Math.floor(Math.random() * 11 + 1)
   var peridot = Math.floor(Math.random() * 11 + 1)
-  var diamond = Math.floor(Math.random() * 11 + 1)
+  var purple = Math.floor(Math.random() * 11 + 1)
   // Setting up random numbers for each crystal
   // Random number between 1 - 12
   // 
@@ -29,7 +29,7 @@ $(document).ready(function() {
     rainbow = Math.floor(Math.random() * 11 + 1);
     amethyst = Math.floor(Math.random() * 11 + 1);
     peridot = Math.floor(Math.random() * 11 + 1);
-    diamond = Math.floor(Math.random() * 11 + 1);
+    purple = Math.floor(Math.random() * 11 + 1);
     userTotal = 0;
     $('#finalTotal').text(userTotal);
   }
@@ -85,8 +85,8 @@ $(document).ready(function() {
       loser();
     }
   })
-  $('#diamond').on('click', function() {
-    userTotal = userTotal + diamond;
+  $('#purple').on('click', function() {
+    userTotal = userTotal + purple;
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
     if (userTotal == Random) {
