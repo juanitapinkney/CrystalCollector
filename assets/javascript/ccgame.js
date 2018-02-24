@@ -6,9 +6,9 @@ $(document).ready(function() {
   $('#randomNumber').text(Random);
   // Appending random number to the randomNumber id in the html doc
   //
-  var rainbow = Math.floor(Math.random() * 11 + 1)
-  var amethyst = Math.floor(Math.random() * 11 + 1)
-  var peridot = Math.floor(Math.random() * 11 + 1)
+  var naicacrystal = Math.floor(Math.random() * 11 + 1)
+  var bluemarine = Math.floor(Math.random() * 11 + 1)
+  var whitecrystal = Math.floor(Math.random() * 11 + 1)
   var purple = Math.floor(Math.random() * 11 + 1)
   // Setting up random numbers for each crystal
   // Random number between 1 - 12
@@ -26,9 +26,9 @@ $(document).ready(function() {
     Random = Math.floor(Math.random() * 101 + 19);
     console.log(Random)
     $('#randomNumber').text(Random);
-    rainbow = Math.floor(Math.random() * 11 + 1);
-    amethyst = Math.floor(Math.random() * 11 + 1);
-    peridot = Math.floor(Math.random() * 11 + 1);
+    naicacrystal = Math.floor(Math.random() * 11 + 1);
+    bluemarine = Math.floor(Math.random() * 11 + 1);
+    whitecrystal = Math.floor(Math.random() * 11 + 1);
     purple = Math.floor(Math.random() * 11 + 1);
     userTotal = 0;
     $('#finalTotal').text(userTotal);
@@ -51,8 +51,8 @@ $(document).ready(function() {
   }
   //sets up click for jewels
   // 
-  $('#rainbow').on('click', function() {
-    userTotal = userTotal + rainbow;
+  $('#naicacrystal').on('click', function() {
+    userTotal = userTotal + naicacrystal;
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
     //sets win/lose conditions
@@ -63,8 +63,8 @@ $(document).ready(function() {
       loser();
     }
   })
-  $('#amethyst').on('click', function() {
-    userTotal = userTotal + amethyst;
+  $('#bluemarine').on('click', function() {
+    userTotal = userTotal + bluemarine;
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
     if (userTotal == Random) {
@@ -73,8 +73,8 @@ $(document).ready(function() {
       loser();
     }
   })
-  $('#peridot').on('click', function() {
-    userTotal = userTotal + peridot;
+  $('#whitecrystal').on('click', function() {
+    userTotal = userTotal + whitecrystal;
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
     //sets win/lose conditions
