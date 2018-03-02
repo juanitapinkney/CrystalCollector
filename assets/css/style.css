@@ -1,31 +1,36 @@
 body {
-	background-image: url('../images/healingcrystal.jpg');	
+/*	background-image: url('../images/crystalbackground.jpg');	
 	background-attachment: fixed;
-	background-position: center: no-repeat;
+	background-position: center center: no-repeat;
 	background-size: cover;
-/*	padding-bottom: 200px;
+	padding-bottom: 200px;*/
+	background:white;
+/*	background-position: scroll;
 */}
 .crystalpic {
 	width: 200px;
 	height: 200px;
-
 }
 h1 {
 	font-size: 40px;
-	font-family: sans-serif;
-	color: navy;
+	font-family: 'Give You Glory';
+	font-weight: bold;
+	color: grey;
 	text-align: center;
+	font-weight: 3rem;
+	text-transform: uppercase;
 	padding-top: 100px;
 }
 li {
-	font-size: 25px;
-	font-family: sans-serif;
-	color: navy;
+	font-size: 20px;
+	font-family: "Give You Glory";
+	color: grey;
 	text-align: center;
 }
-div {
+div /*.instructions*/ {
 	font-size: 25px;
 	font-family: sans-serif;
-	color: navy;
+/*	font-style: italic;
+*/	color: grey;
 	text-align: center;
 }
