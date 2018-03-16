@@ -1,36 +1,32 @@
 body {
-/*	background-image: url('../images/crystalbackground.jpg');	
-	background-attachment: fixed;
-	background-position: center center: no-repeat;
-	background-size: cover;
-	padding-bottom: 200px;*/
-	background:white;
-/*	background-position: scroll;
-*/}
+	background-image: url('../images/background.png')
+}
 .crystalpic {
 	width: 200px;
 	height: 200px;
 }
 h1 {
 	font-size: 40px;
-	font-family: 'Give You Glory';
-	font-weight: bold;
-	color: grey;
+	font-family: sans-serif;
+	font-weight: lighter;
+	font-width: 1.15;
+	color: gray;
 	text-align: center;
 	font-weight: 3rem;
 	text-transform: uppercase;
 	padding-top: 100px;
 }
 li {
-	font-size: 20px;
-	font-family: "Give You Glory";
-	color: grey;
+	font-size: 17px;
+	font-family: sans-serif;
+	font-weight: lighter;
+	font-width: 1.15;
+	color: gray;
 	text-align: center;
 }
 div /*.instructions*/ {
 	font-size: 25px;
 	font-family: sans-serif;
-/*	font-style: italic;
-*/	color: grey;
+	color: gray;
 	text-align: center;
 }
