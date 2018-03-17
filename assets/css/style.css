@@ -1,32 +1,75 @@
-body {
-	background-image: url('../images/background.png')
+html {
+	background: url("../images/crystal4.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: left;
 }
 .crystalpic {
 	width: 200px;
 	height: 200px;
 }
 h1 {
+	color: white;
+	font-size: 50px;
+	font-family: sans-serif;
+	font-weight: lighter;
+	font-width: 1.5;
+	text-align: left;
+	margin-left: 10px;
+	padding-top: 70px;
+}
+h2 {
+	color: white;
 	font-size: 40px;
 	font-family: sans-serif;
 	font-weight: lighter;
-	font-width: 1.15;
-	color: gray;
-	text-align: center;
-	font-weight: 3rem;
-	text-transform: uppercase;
-	padding-top: 100px;
+	font-width: 1.5;
+	text-align: left;
+	margin-left: 10px;
 }
-li {
-	font-size: 17px;
+h3 {
+	color: white;
+	font-size: 30px;
 	font-family: sans-serif;
 	font-weight: lighter;
-	font-width: 1.15;
-	color: gray;
-	text-align: center;
+	font-width: 1.5;
+	text-align: left;
+	margin-left: 10px;
 }
-div /*.instructions*/ {
-	font-size: 25px;
+h4 {
+	color: white;
+	font-size: 20px;
 	font-family: sans-serif;
-	color: gray;
+	font-weight: lighter;
+	font-width: 1.5;
+	text-align: left;
+	margin-left: 10px;
+}
+li {
+	color: white;
+	font-size: 20px;
+	font-family: sans-serif;
+	font-weight: lighter;
+	font-width: 1.5;
+	text-align: left;
+	margin-left: 10px;
+}
+div {
+	color: white;
+	font-size: 20px;
+	font-family: sans-serif;
+	font-weight: lighter;
+	font-width: 1.5;
+	text-align: left;
+	margin-left: 10px;
+}
+footer {
+	color: white;
+	font-size: 10px;
+	font-family: sans-serif;
+	font-weight: lighter;
+	font-width: 1.5;
 	text-align: center;
 }
