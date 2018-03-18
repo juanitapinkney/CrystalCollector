@@ -5,7 +5,7 @@ html {
 	-o-background-size: cover;
 	background-size: cover;
 	background-position: left;
-	margin-left: 20px;
+	margin-left: 50px;
 }
 .crystalpic {
 	width: 200px;
@@ -13,7 +13,7 @@ html {
 }
 h1 {
 	color: white;
-	font-size: 50px;
+	font-size: 40px;
 	font-family: sans-serif;
 	font-weight: lighter;
 	font-width: 1.5;
@@ -22,21 +22,13 @@ h1 {
 }
 h2 {
 	color: white;
-	font-size: 40px;
-	font-family: sans-serif;
-	font-weight: lighter;
-	font-width: 1.5;
-	text-align: left;
-}
-h3 {
-	color: white;
 	font-size: 30px;
 	font-family: sans-serif;
 	font-weight: lighter;
 	font-width: 1.5;
 	text-align: left;
 }
-h4 {
+h3 {
 	color: white;
 	font-size: 20px;
 	font-family: sans-serif;
