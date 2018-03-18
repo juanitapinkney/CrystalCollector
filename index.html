@@ -1,7 +1,11 @@
 <!Doctype html>
 <html lang="en">
    <head>
+
       <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
       <title>Crystal Collector</title>
 
       <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
@@ -11,75 +15,74 @@
 
  </head>
 <body>
-
-    <div class="container">
-        <div class="row">
-          <div class="col-md-12 ml-auto">
-            <h1><strong>Welcome to Crystal Collector!</strong></h1>
-            <br><br>
-            <h2>Rules of the game</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <h1>Welcome to Crystal Collector</h1>
+        <br><br>
+        <h2>Rules of the game</h2>
+        <br><br>
+        <ul>
+          <li>Choose any of the crystals below.</li>
           <br>
-          <ul>
-            <li>Choose any of the crystals below.</li><br>
-            <li>Each crystal will give a random number.</li><br>
-            <li>If you match your total score to the random number, you win!!</li><br>
-            <li>If your total score goes above the random number, you lose. :(</li><br>
-            <li>Simply click on each crystal to reveal the hidden number.</li><br>
-            <li>New random numbers are revealed with each new game.</li><br>
-            <li>Good luck! *(^_^)*</li><br>
-          </ul>
+          <li>Each crystal will give a random number.</li>
+          <br>
+          <li>If you match your total score to the random number, you win!!</li>
+          <br>
+          <li>If your total score goes above the random number, you lose.</li>
+          <br>
+          <li>Simply click on each crystal to reveal the hidden number.</li>
+          <br>
+          <li>New random numbers are revealed with each new game.</li>
+          <br>
+          <li>Good luck! *(^_^)*</li>
+          <br>
+        </ul>
+        <div id="randomnumber-and-scoreboard">
+          <div id="random-number-generator">
+            <span id="random-number"></span>
+          </div>
+          <br>
+          <div class="numberToMatch">
+            <h3>Number to get: <span id= "randomNumber"></span></h3>
+            <br>
+            <div class="userTotal">
+              <h3>Your total score is: <span id="finalTotal"></span></h3>
+            </div>
+            <br>
+            <div class="winsAndLosses">
+              <h3>Wins: <span id= "numberWins"></span><br><br> Losses: <span id= "numberLosses"></span></h3>
+            </div>
+          </div>
         </div>
-
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 ml-auto">
-              <div id="randomnumber-and-scoreboard">
-                <div id="random-number-generator">
-                  <span id="random-number"></span>
-                </div>
-                <br>
-                <div class="numberToMatch">
-                  <h3>Number to get: <span id= "randomNumber"></span></h3>
-                  <br>
-                  <div class="userTotal">
-                    <h3>Your total score is: <span id="finalTotal"></span></h3>
-                  </div>
-                  <br>
-                </div>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-5 ml-auto">
-                      <div class="winsAndLosses">
-                        <h4>Wins: <span id= "numberWins"></span><br><br> Losses: <span id= "numberLosses"></span></h4>
-                      </div>
-                      <br>
-                      <div class="crystal">
-                        <img src="assets/images/purple.jpg" class=crystalpic id= "purple" alt="Purple Crystal">
-                        <img src="assets/images/bluemarine.jpg" class=crystalpic id="bluemarine" alt="bluemarine">
-                        <img src="assets/images/whitecrystal.jpg" class=crystalpic id= "whitecrystal" alt="whitecrystal">
-                        <img src="assets/images/naicacrystal.png" class=crystalpic id="naicacrystal" alt="naicacrystal">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <br>
+      </div>
+    </div>
+  </div>
+    <div class="crystal">
+      <img src="assets/images/purple.jpg" class=crystalpic id= "purple" alt="Purple Crystal">
+      <img src="assets/images/bluemarine.jpg" class=crystalpic id="bluemarine" alt="bluemarine">
+      <img src="assets/images/whitecrystal.jpg" class=crystalpic id= "whitecrystal" alt="whitecrystal">
+      <img src="assets/images/naicacrystal.png" class=crystalpic id="naicacrystal" alt="naicacrystal">
+    </div>
+  </div>
+  <br>
 
     <!-- Footer --><!-- Copyright -->
-   <footer>      
-    <div class="copyright py-4 text-center text-white font-weight-light mb-0">
-          <div class="container" style="text-align: center; font-family: sans-serif; font-size: 15px;">Copyright &copy;  <script language="javascript" type="text/javascript">
-              var today = new Date();
+    <footer>
+      <div class="copyright py-4 text-center text-white font-weight-light mb-0">
+        <div class="container" style="text-align: center; font-family: sans-serif; font-size: 15px;">Copyright &copy;
+          <script language="javascript" type="text/javascript">
+            var today = new Date();
               var year = today.getFullYear();
               document.write(year);
             </script> Juanita Pinkney - Web Developer
           </div>
         </div>
-    </footer>
+      </footer>
 
-    <!-- Javascript and jQuery Script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./assets/javascript/ccgame.js" type="text/javascript"></script>
-
-  </body>
-</html>
+      <!-- Javascript and jQuery Script -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script type="text/javascript" src="./assets/javascript/ccgame.js" type="text/javascript"></script>
+    </body>
+    </html>
 
