@@ -6,10 +6,10 @@ $(document).ready(function() {
   $('#randomNumber').text(Random);
   // Appending random number to the randomNumber id in the html doc
   //
-  var naicacrystal = Math.floor(Math.random() * 11 + 1)
-  var bluemarine = Math.floor(Math.random() * 11 + 1)
+  var marinecrystal = Math.floor(Math.random() * 11 + 1)
   var whitecrystal = Math.floor(Math.random() * 11 + 1)
-  var purple = Math.floor(Math.random() * 11 + 1)
+  var bluecrystal = Math.floor(Math.random() * 11 + 1)
+  var purplecrystal = Math.floor(Math.random() * 11 + 1)
   // Setting up random numbers for each crystal
   // Random number between 1 - 12
   // 
@@ -26,10 +26,10 @@ $(document).ready(function() {
     Random = Math.floor(Math.random() * 101 + 19);
     console.log(Random)
     $('#randomNumber').text(Random);
-    naicacrystal = Math.floor(Math.random() * 11 + 1);
-    bluemarine = Math.floor(Math.random() * 11 + 1);
+    marinecrystal = Math.floor(Math.random() * 11 + 1);
     whitecrystal = Math.floor(Math.random() * 11 + 1);
-    purple = Math.floor(Math.random() * 11 + 1);
+    bluecrystal = Math.floor(Math.random() * 11 + 1);
+    purplecrystal = Math.floor(Math.random() * 11 + 1);
     userTotal = 0;
     $('#finalTotal').text(userTotal);
   }
@@ -51,22 +51,12 @@ $(document).ready(function() {
   }
   //sets up click for jewels
   // 
-  $('#naicacrystal').on('click', function() {
-    userTotal = userTotal + naicacrystal;
+  $('#marinecrystal').on('click', function() {
+    userTotal = userTotal + marinecrystal;
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
     //sets win/lose conditions
     // 
-    if (userTotal == Random) {
-      winner();
-    } else if (userTotal > Random) {
-      loser();
-    }
-  })
-  $('#bluemarine').on('click', function() {
-    userTotal = userTotal + bluemarine;
-    console.log("New userTotal= " + userTotal);
-    $('#finalTotal').text(userTotal);
     if (userTotal == Random) {
       winner();
     } else if (userTotal > Random) {
@@ -77,6 +67,16 @@ $(document).ready(function() {
     userTotal = userTotal + whitecrystal;
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
+    if (userTotal == Random) {
+      winner();
+    } else if (userTotal > Random) {
+      loser();
+    }
+  })
+  $('#bluecrystal').on('click', function() {
+    userTotal = userTotal + bluecrystal;
+    console.log("New userTotal= " + userTotal);
+    $('#finalTotal').text(userTotal);
     //sets win/lose conditions
     // 
     if (userTotal == Random) {
@@ -85,8 +85,8 @@ $(document).ready(function() {
       loser();
     }
   })
-  $('#purple').on('click', function() {
-    userTotal = userTotal + purple;
+  $('#purplecrystal').on('click', function() {
+    userTotal = userTotal + purplecrystal;
     console.log("New userTotal= " + userTotal);
     $('#finalTotal').text(userTotal);
     if (userTotal == Random) {
